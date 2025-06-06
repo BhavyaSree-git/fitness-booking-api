@@ -4,7 +4,7 @@ A simple RESTful Booking API for a fictional fitness studio offering Yoga, Zumba
 
 <div align="right">
 
-[Watch the Screeccast Here](https://github.com/BhavyaSree-git/fitness-booking-api/blob/6d5bbf93a7892e918ae9ce4a1f98b2ce0311b4ed/Omnify_Assignment_Demo.mp4)
+[Watch the Screeccast Here](<https://github.com/BhavyaSree-git/fitness-booking-api/blob/6d5bbf93a7892e918ae9ce4a1f98b2ce0311b4ed/Omnify_Assignment_Demo.mp4>)
 
 </div>
 
