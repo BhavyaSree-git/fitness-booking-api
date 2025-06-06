@@ -50,99 +50,115 @@ Logging for request and error tracking
 
 **1. GET /classes**
 
-Returns a list of all upcoming fitness classes.
+Purpose: Get all available fitness classes.
 
-Each class includes:
+https://github.com/BhavyaSree-git/fitness-booking-api/blob/2e9beca64d59330eadb7d7031e2339c8e130accb/uploads/book_post_api.png 
 
-id
+Request:
 
-name (e.g., Yoga, Zumba, HIIT)
+Method: GET
 
-datetime (in the requested timezone, default IST)
+URL: http://localhost:5000/classes
 
-instructor
-
-available_slots
+Optional query param: tz (default is Asia/Kolkata)
 
 Sample Response
 json
-Copy
-Edit
+
 [
   {
     "id": 1,
     "name": "Yoga",
-    "datetime": "2025-06-10T09:00:00+05:30",
-    "instructor": "Anita Sharma",
-    "available_slots": 5
+    "datetime": "2025-06-05 07:00:00",
+    "instructor": "Anita",
+    "available_slots": 10
   },
   {
     "id": 2,
     "name": "Zumba",
-    "datetime": "2025-06-10T11:00:00+05:30",
-    "instructor": "Rahul Verma",
-    "available_slots": 3
+    "datetime": "2025-06-05 09:00:00",
+    "instructor": "Ravi",
+    "available_slots": 8
+  },
+  {
+    "id": 3,
+    "name": "HIIT",
+    "datetime": "2025-06-05 18:00:00",
+    "instructor": "Sneha",
+    "available_slots": 5
   }
 ]
 
 **2. POST /book**
 
-Accepts booking requests with the following JSON body:
+Purpose: Book a slot in a class.
+
+Request:
+
+Method: POST
+
+URL: http://localhost:5000/book
+
+Body (raw JSON):
 
 json
-Copy
-Edit
+
 {
   "class_id": 1,
   "client_name": "Bhavya",
   "client_email": "bhavya.mettupalli@gmail.com"
 }
-Validates:
 
-All fields are present and valid
-
-The class exists
-
-Slots are available
-
-On success, reduces available slots by 1 and returns confirmation.
-
-Handles overbooking errors.
-
-Sample Success Response
-json
-Copy
-Edit
+Success Response (200):
 {
-  "message": "Booking confirmed for Yoga on 2025-06-10T09:00:00+05:30",
-  "booking_id": 123
+  "message": "Booking confirmed"
 }
-Sample Error Response (e.g., no slots left)
-json
-Copy
-Edit
+
+Error Response (Missing field):
+
 {
-  "error": "No slots available for this class."
+  "error": "Missing required fields"
+}
+
+Error Response (No slots):
+
+{
+  "error": "No slots available"
+}
+
+Error Response (Class not found):
+{
+  "error": "Class not found"
 }
 
 **3. GET /bookings?email=<client_email>**
 
-Returns all bookings made by a specific email address.
+Purpose: Get all bookings for a given email.
 
-If no bookings found, returns an empty list.
+Request:
+
+Method: GET
+
+URL (with email query param):
+http://localhost:5000/bookings?email=bhavya.mettupalli@gmail.com
 
 Sample Response
 json
-Copy
-Edit
 [
   {
-    "booking_id": 123,
+    "booking_id": 1,
     "class_name": "Yoga",
-    "datetime": "2025-06-10T09:00:00+05:30",
-    "instructor": "Anita Sharma"
+    "instructor": "Anita",
+    "datetime": "2025-06-05 07:00:00",
+    "timestamp": "2025-06-05 12:34:56"
   }
 ]
+
+Error Response (missing email):
+
+{
+  "error": "Email query param is required"
+}
 
 ## ⏰ Timezone Management
 
@@ -182,23 +198,11 @@ pip
 
 Setup
 Clone the repo:
-
-bash
-Copy
-Edit
 git clone https://github.com/BhavyaSree-git/fitness-booking-api.git
 cd fitness-booking-api
 Install dependencies:
-
-bash
-Copy
-Edit
 pip install -r requirements.txt
 Run the app:
-
-bash
-Copy
-Edit
 python app.py
 The API will be available at http://localhost:5000
 
@@ -206,26 +210,14 @@ The API will be available at http://localhost:5000
 ## 🔧 Sample cURL Requests
 
 Get Classes (default IST)
-bash
-Copy
-Edit
 curl http://localhost:5000/classes
 Get Classes in a Different Timezone 
-bash
-Copy
-Edit
 curl "http://localhost:5000/classes?timezone=UTC"
 Book a Class
-bash
-Copy
-Edit
-curl -X POST http://localhost:5000/book \
--H "Content-Type: application/json" \
+curl -X POST http://localhost:5000/book 
+-H "Content-Type: application/json" 
 -d '{"class_id":1,"client_name":"Bhavya","client_email":"bhavya.mettupalli@gmail.com"}'
 Get Bookings by Email
-bash
-Copy
-Edit
 curl "http://localhost:5000/bookings?email=bhavya.mettupalli@gmail.com"
 
 ## 🧪 Running Tests
@@ -234,19 +226,16 @@ Basic unit tests for validation and booking logic included.
 
 Run tests using:
 
-bash
-Copy
-Edit
 python -m unittest discover tests
 
 ## 📁 Sample Seed Data
 
 Classes seeded on app start with:
 
-id	name	datetime (IST)	instructor	available_slots
-1	Yoga	2025-06-10 09:00:00+05:30	Anita Sharma	10
-2	Zumba	2025-06-10 11:00:00+05:30	Rahul Verma	8
-3	HIIT	2025-06-11 07:00:00+05:30	Meera Patel	12
+id	name	datetime (IST)	            instructor	    available_slots
+1	  Yoga	2025-06-10 09:00:00+05:30	    Anita Sharma	      10
+2	  Zumba	2025-06-10 11:00:00+05:30	    Rahul Verma	        8
+3	  HIIT	2025-06-11 07:00:00+05:30	    Meera Patel	        12
 
 ## 🎥 Loom Video
 
