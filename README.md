@@ -1,8 +1,8 @@
-**Fitness Booking API**
+# Fitness Booking API
 
 A simple RESTful Booking API for a fictional fitness studio offering Yoga, Zumba, and HIIT classes.
 
-**🎯 Objective**
+## 🎯 Objective
 
 Build a backend API to allow clients to:
 
@@ -12,7 +12,7 @@ Book spots in a class (if slots are available)
 
 View their existing bookings by email
 
-**📦 Tech Stack**
+### 📦 Tech Stack
 
 Python 3.x
 
@@ -46,8 +46,9 @@ Logging for request and error tracking
 
     
 
-**🛠️ Features & API Endpoints**
-# 1. GET /classes
+## 🛠️ Features & API Endpoints
+
+**1. GET /classes**
 
 Returns a list of all upcoming fitness classes.
 
@@ -83,7 +84,8 @@ Edit
     "available_slots": 3
   }
 ]
-## 2. POST /book
+
+**2. POST /book**
 
 Accepts booking requests with the following JSON body:
 
@@ -123,7 +125,7 @@ Edit
   "error": "No slots available for this class."
 }
 
-### 3. GET /bookings?email=<client_email>
+**3. GET /bookings?email=<client_email>**
 
 Returns all bookings made by a specific email address.
 
@@ -142,7 +144,7 @@ Edit
   }
 ]
 
-**⏰ Timezone Management**
+## ⏰ Timezone Management
 
 Classes are created and stored internally in IST timezone.
 
@@ -152,7 +154,7 @@ Defaults to IST if no timezone specified.
 
 Timezone handling implemented via pytz library.
 
-**📝 Validation & Error Handling**
+## 📝 Validation & Error Handling
 
 Input validation for required fields.
 
@@ -171,7 +173,7 @@ Proper HTTP status codes:
 Clear error messages in JSON response.
 
 
-**🧪 Running the Project**
+## 🧪 Running the Project
 
 Prerequisites
 Python 3.7+
@@ -201,7 +203,7 @@ python app.py
 The API will be available at http://localhost:5000
 
 
-**🔧 Sample cURL Requests**
+## 🔧 Sample cURL Requests
 
 Get Classes (default IST)
 bash
@@ -226,7 +228,7 @@ Copy
 Edit
 curl "http://localhost:5000/bookings?email=bhavya.mettupalli@gmail.com"
 
-**🧪 Running Tests**
+## 🧪 Running Tests
 
 Basic unit tests for validation and booking logic included.
 
@@ -237,7 +239,7 @@ Copy
 Edit
 python -m unittest discover tests
 
-**📁 Sample Seed Data**
+## 📁 Sample Seed Data
 
 Classes seeded on app start with:
 
@@ -246,11 +248,11 @@ id	name	datetime (IST)	instructor	available_slots
 2	Zumba	2025-06-10 11:00:00+05:30	Rahul Verma	8
 3	HIIT	2025-06-11 07:00:00+05:30	Meera Patel	12
 
-**🎥 Loom Video**
+## 🎥 Loom Video
 
 Include a link to your Loom video walkthrough explaining the project, API endpoints, design decisions, and a demo.
 
-**📞 Contact**
+## 📞 Contact
 
 If you have any questions, feel free to reach out at bhavya.mettupalli@gmail.com.
 
