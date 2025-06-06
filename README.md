@@ -28,7 +28,7 @@ Logging for request and error tracking
 
 ## 📁 Project Structure
 
-  fitness_booking_api/
+    fitness_booking_api/
     ├── pycache/ # Python bytecode cache
     ├── app.py # Main Flask app entry
     ├── models.py # Class and Booking logic
