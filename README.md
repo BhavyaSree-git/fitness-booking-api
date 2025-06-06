@@ -63,7 +63,7 @@ Edit
     "available_slots": 3
   }
 ]
-# 2. POST /book
+## 2. POST /book
 
 Accepts booking requests with the following JSON body:
 
@@ -102,7 +102,8 @@ Edit
 {
   "error": "No slots available for this class."
 }
-# 3. GET /bookings?email=<client_email>
+
+## 3. GET /bookings?email=<client_email>
 
 Returns all bookings made by a specific email address.
 
@@ -225,10 +226,12 @@ id	name	datetime (IST)	instructor	available_slots
 2	Zumba	2025-06-10 11:00:00+05:30	Rahul Verma	8
 3	HIIT	2025-06-11 07:00:00+05:30	Meera Patel	12
 
-🎥 Loom Video
+**🎥 Loom Video**
+
 Include a link to your Loom video walkthrough explaining the project, API endpoints, design decisions, and a demo.
 
-📞 Contact
+**📞 Contact**
+
 If you have any questions, feel free to reach out at [your.email@example.com].
 
 Happy coding & enjoy your fitness journey! 🧘‍♂️🏋️‍♀️💪
