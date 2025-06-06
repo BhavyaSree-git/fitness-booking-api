@@ -2,6 +2,12 @@
 
 A simple RESTful Booking API for a fictional fitness studio offering Yoga, Zumba, and HIIT classes.
 
+<div align="right">
+
+[Watch the Screeccast Here](https://github.com/BhavyaSree-git/fitness-booking-api/blob/8ff8608c7822dd58d18c784fdf04989c4ae7ef00/media/Vedio/Omnify_assignment_Demo.mp4)
+
+</div>
+
 ## 🎯 Objective
 
 Build a backend API to allow clients to:
@@ -29,22 +35,19 @@ Logging for request and error tracking
 ## 📁 Project Structure
 
     fitness_booking_api/
-    ├── pycache/ # Python bytecode cache
-    ├── app.py # Main Flask app entry
-    ├── models.py # Class and Booking logic
-    ├── utils.py # Utility functions (e.g., timezone conversion)
-    ├── requirements.txt # Python dependencies
-    ├── README.md # Project documentation
-    ├── venv/ # Python virtual environment
+    ├── pycache/
+    ├── app.py
+    ├── models.py
+    ├── utils.py
+    ├── requirements.txt
+    ├── README.md
+    ├── venv/
     ├── instance/
-    │ └── database.db # SQLite database (optional if seeded at runtime)
-    └── uploads/ # Screenshots for documentation
+    │ └── database.db
+    └── uploads/
     ├── get_classes.png
     ├── post_book.png
     └── get_bookings.png
-
-
-    
 
 ## 🛠️ Features & API Endpoints
 
@@ -53,7 +56,7 @@ Logging for request and error tracking
 Purpose: Get all available fitness classes.
 
 <div style="display:flex;">
-    <img src="https://github.com/BhavyaSree-git/fitness-booking-api/blob/0891f3e949c10652618187ee313916cd1a5d8d4c/uploads/classes_get_api.png" alt="Screenshot" width="49%">
+    <img src="https://github.com/BhavyaSree-git/fitness-booking-api/blob/f44732945f1e58016e0f173f95a6d095d9569b63/media/uploads/classes_get_api.png" alt="Screenshot" width="49%">
 </div> 
  
 Request:
@@ -68,27 +71,27 @@ Sample Response
 json
 
 [
-  {
-    "id": 1,
-    "name": "Yoga",
-    "datetime": "2025-06-05 07:00:00",
-    "instructor": "Anita",
-    "available_slots": 10
-  },
-  {
-    "id": 2,
-    "name": "Zumba",
-    "datetime": "2025-06-05 09:00:00",
-    "instructor": "Ravi",
-    "available_slots": 8
-  },
-  {
-    "id": 3,
-    "name": "HIIT",
-    "datetime": "2025-06-05 18:00:00",
-    "instructor": "Sneha",
-    "available_slots": 5
-  }
+{
+"id": 1,
+"name": "Yoga",
+"datetime": "2025-06-05 07:00:00",
+"instructor": "Anita",
+"available_slots": 10
+},
+{
+"id": 2,
+"name": "Zumba",
+"datetime": "2025-06-05 09:00:00",
+"instructor": "Ravi",
+"available_slots": 8
+},
+{
+"id": 3,
+"name": "HIIT",
+"datetime": "2025-06-05 18:00:00",
+"instructor": "Sneha",
+"available_slots": 5
+}
 ]
 
 **2. POST /book**
@@ -96,8 +99,8 @@ json
 Purpose: Book a slot in a class.
 
 <div style="display:flex;">
-    <img src="https://github.com/BhavyaSree-git/fitness-booking-api/blob/2e9beca64d59330eadb7d7031e2339c8e130accb/uploads/book_post_api.png" alt="Screenshot" width="49%">
-</div> 
+    <img src="https://github.com/BhavyaSree-git/fitness-booking-api/blob/f44732945f1e58016e0f173f95a6d095d9569b63/media/uploads/book_post.png" alt="Screenshot" width="49%">
+</div>
 
 Request:
 
@@ -110,31 +113,31 @@ Body (raw JSON):
 json
 
 {
-  "class_id": 1,
-  "client_name": "Bhavya",
-  "client_email": "bhavya.mettupalli@gmail.com"
+"class_id": 1,
+"client_name": "Bhavya",
+"client_email": "bhavya.mettupalli@gmail.com"
 }
 
 Success Response (200):
 {
-  "message": "Booking confirmed"
+"message": "Booking confirmed"
 }
 
 Error Response (Missing field):
 
 {
-  "error": "Missing required fields"
+"error": "Missing required fields"
 }
 
 Error Response (No slots):
 
 {
-  "error": "No slots available"
+"error": "No slots available"
 }
 
 Error Response (Class not found):
 {
-  "error": "Class not found"
+"error": "Class not found"
 }
 
 **3. GET /bookings?email=<client_email>**
@@ -142,8 +145,8 @@ Error Response (Class not found):
 Purpose: Get all bookings for a given email.
 
 <div style="display:flex;">
-    <img src="https://github.com/BhavyaSree-git/fitness-booking-api/blob/0891f3e949c10652618187ee313916cd1a5d8d4c/uploads/bookings_get_api.png" alt="Screenshot" width="49%">
-</div> 
+    <img src="https://github.com/BhavyaSree-git/fitness-booking-api/blob/f44732945f1e58016e0f173f95a6d095d9569b63/media/uploads/bookings_get_api.png" alt="Screenshot" width="49%">
+</div>
 
 Request:
 
@@ -155,19 +158,19 @@ http://localhost:5000/bookings?email=bhavya.mettupalli@gmail.com
 Sample Response
 json
 [
-  {
-    "booking_id": 1,
-    "class_name": "Yoga",
-    "instructor": "Anita",
-    "datetime": "2025-06-05 07:00:00",
-    "timestamp": "2025-06-05 12:34:56"
-  }
+{
+"booking_id": 1,
+"class_name": "Yoga",
+"instructor": "Anita",
+"datetime": "2025-06-05 07:00:00",
+"timestamp": "2025-06-05 12:34:56"
+}
 ]
 
 Error Response (missing email):
 
 {
-  "error": "Email query param is required"
+"error": "Email query param is required"
 }
 
 ## ⏰ Timezone Management
@@ -198,7 +201,6 @@ Proper HTTP status codes:
 
 Clear error messages in JSON response.
 
-
 ## 🧪 Running the Project
 
 Prerequisites
@@ -216,16 +218,15 @@ Run the app:
 python app.py
 The API will be available at http://localhost:5000
 
-
 ## 🔧 Sample cURL Requests
 
 Get Classes (default IST)
 curl http://localhost:5000/classes
-Get Classes in a Different Timezone 
+Get Classes in a Different Timezone
 curl "http://localhost:5000/classes?timezone=UTC"
 Book a Class
-curl -X POST http://localhost:5000/book 
--H "Content-Type: application/json" 
+curl -X POST http://localhost:5000/book
+-H "Content-Type: application/json"
 -d '{"class_id":1,"client_name":"Bhavya","client_email":"bhavya.mettupalli@gmail.com"}'
 Get Bookings by Email
 curl "http://localhost:5000/bookings?email=bhavya.mettupalli@gmail.com"
@@ -242,10 +243,10 @@ python -m unittest discover tests
 
 Classes seeded on app start with:
 
-id	name	datetime (IST)	            instructor	    available_slots
-1	  Yoga	2025-06-10 09:00:00+05:30	    Anita Sharma	      10
-2	  Zumba	2025-06-10 11:00:00+05:30	    Rahul Verma	        8
-3	  HIIT	2025-06-11 07:00:00+05:30	    Meera Patel	        12
+id name datetime (IST) instructor available_slots
+1 Yoga 2025-06-10 09:00:00+05:30 Anita Sharma 10
+2 Zumba 2025-06-10 11:00:00+05:30 Rahul Verma 8
+3 HIIT 2025-06-11 07:00:00+05:30 Meera Patel 12
 
 ## 🎥 Loom Video
 
