@@ -1,7 +1,7 @@
-Fitness Booking API
+**Fitness Booking API**
 A simple RESTful Booking API for a fictional fitness studio offering Yoga, Zumba, and HIIT classes.
 
-🎯 Objective
+**🎯 Objective**
 Build a backend API to allow clients to:
 
 View available fitness classes
@@ -10,7 +10,7 @@ Book spots in a class (if slots are available)
 
 View their existing bookings by email
 
-📦 Tech Stack
+**📦 Tech Stack**
 Python 3.x
 
 Flask (can be replaced with Django or FastAPI)
@@ -23,8 +23,8 @@ unittest for basic unit tests
 
 Logging for request and error tracking
 
-🛠️ Features & API Endpoints
-1. GET /classes
+**🛠️ Features & API Endpoints**
+# 1. GET /classes
 Returns a list of all upcoming fitness classes.
 
 Each class includes:
@@ -59,7 +59,7 @@ Edit
     "available_slots": 3
   }
 ]
-2. POST /book
+# 2. POST /book
 Accepts booking requests with the following JSON body:
 
 json
@@ -97,7 +97,7 @@ Edit
 {
   "error": "No slots available for this class."
 }
-3. GET /bookings?email=<client_email>
+# 3. GET /bookings?email=<client_email>
 Returns all bookings made by a specific email address.
 
 If no bookings found, returns an empty list.
@@ -114,7 +114,7 @@ Edit
     "instructor": "Anita Sharma"
   }
 ]
-⏰ Timezone Management
+**⏰ Timezone Management**
 Classes are created and stored internally in IST timezone.
 
 API supports a query parameter ?timezone=Europe/London (or any valid timezone string) on the /classes and /bookings endpoints to return date/time adjusted to the requested timezone.
@@ -123,7 +123,7 @@ Defaults to IST if no timezone specified.
 
 Timezone handling implemented via pytz library.
 
-📝 Validation & Error Handling
+**📝 Validation & Error Handling**
 Input validation for required fields.
 
 Proper HTTP status codes:
@@ -140,7 +140,7 @@ Proper HTTP status codes:
 
 Clear error messages in JSON response.
 
-🧪 Running the Project
+**🧪 Running the Project**
 Prerequisites
 Python 3.7+
 
@@ -168,7 +168,7 @@ Edit
 python app.py
 The API will be available at http://localhost:5000
 
-🔧 Sample cURL Requests
+**🔧 Sample cURL Requests**
 Get Classes (default IST)
 bash
 Copy
@@ -191,7 +191,7 @@ bash
 Copy
 Edit
 curl "http://localhost:5000/bookings?email=john.doe@example.com"
-🧪 Running Tests
+**🧪 Running Tests**
 Basic unit tests for validation and booking logic included.
 
 Run tests using:
@@ -200,7 +200,7 @@ bash
 Copy
 Edit
 python -m unittest discover tests
-📁 Sample Seed Data
+**📁 Sample Seed Data**
 Classes seeded on app start with:
 
 id	name	datetime (IST)	instructor	available_slots
