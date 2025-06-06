@@ -52,8 +52,10 @@ Logging for request and error tracking
 
 Purpose: Get all available fitness classes.
 
-https://github.com/BhavyaSree-git/fitness-booking-api/blob/2e9beca64d59330eadb7d7031e2339c8e130accb/uploads/book_post_api.png 
-
+<div style="display:flex;">
+    <img src="https://github.com/BhavyaSree-git/fitness-booking-api/blob/2e9beca64d59330eadb7d7031e2339c8e130accb/uploads/book_post_api.png" alt="Screenshot" width="49%">
+</div> 
+ 
 Request:
 
 Method: GET
