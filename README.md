@@ -46,7 +46,7 @@ This is a simple RESTful Booking API for a fictional fitness studio offering Yog
     "available_slots": 5
   }
 ]
-2. Book a Class
+##### 2. Book a Class
 POST /book
 
 Request Body:
@@ -59,7 +59,7 @@ Success Response:
 {
   "message": "Booking Confirmed"
 }
-3. View Bookings by Email
+###### 3. View Bookings by Email
 GET /bookings?email=sree@gmail.com
 
 Sample Response:
@@ -73,16 +73,16 @@ Sample Response:
   }
 ]
 Setup Instructions
-# Clone the repo
+####### Clone the repo
 git clone https://github.com/your-username/fitness-booking-api.git
 cd fitness-booking-api
 
-# Create virtual environment
+## Create virtual environment
 python -m venv venv
 venv\Scripts\activate  # or source venv/bin/activate on Linux/Mac
 
-# Install dependencies
+## Install dependencies
 pip install -r requirements.txt
 
-# Run the Flask app
+## Run the Flask app
 python app.py
