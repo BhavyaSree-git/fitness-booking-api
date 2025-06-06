@@ -26,7 +26,7 @@ unittest for basic unit tests
 
 Logging for request and error tracking
 
-**Project Structure **
+## Project Structure
 
   fitness_booking_api/
   ├── __pycache__/                    # Python bytecode cache
