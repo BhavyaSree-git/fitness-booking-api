@@ -54,10 +54,6 @@ Logging for request and error tracking
 **1. GET /classes**
 
 Purpose: Get all available fitness classes.
-
-<div style="display:flex;">
-    <img src="https://github.com/BhavyaSree-git/fitness-booking-api/blob/f44732945f1e58016e0f173f95a6d095d9569b63/media/uploads/classes_get_api.png" alt="Screenshot" width="49%">
-</div> 
  
 Request:
 
