@@ -140,6 +140,7 @@ Proper HTTP status codes:
 
 Clear error messages in JSON response.
 
+
 **🧪 Running the Project**
 Prerequisites
 Python 3.7+
@@ -168,6 +169,7 @@ Edit
 python app.py
 The API will be available at http://localhost:5000
 
+
 **🔧 Sample cURL Requests**
 Get Classes (default IST)
 bash
@@ -191,6 +193,7 @@ bash
 Copy
 Edit
 curl "http://localhost:5000/bookings?email=john.doe@example.com"
+
 **🧪 Running Tests**
 Basic unit tests for validation and booking logic included.
 
@@ -200,6 +203,7 @@ bash
 Copy
 Edit
 python -m unittest discover tests
+
 **📁 Sample Seed Data**
 Classes seeded on app start with:
 
