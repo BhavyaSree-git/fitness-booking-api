@@ -72,8 +72,8 @@ Copy
 Edit
 {
   "class_id": 1,
-  "client_name": "John Doe",
-  "client_email": "john.doe@example.com"
+  "client_name": "Bhavya",
+  "client_email": "bhavya.mettupalli@gmail.com"
 }
 Validates:
 
@@ -103,7 +103,7 @@ Edit
   "error": "No slots available for this class."
 }
 
-## 3. GET /bookings?email=<client_email>
+### 3. GET /bookings?email=<client_email>
 
 Returns all bookings made by a specific email address.
 
@@ -164,7 +164,7 @@ Clone the repo:
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/fitness-booking-api.git
+git clone https://github.com/BhavyaSree-git/fitness-booking-api.git
 cd fitness-booking-api
 Install dependencies:
 
@@ -188,7 +188,7 @@ bash
 Copy
 Edit
 curl http://localhost:5000/classes
-Get Classes in a Different Timezone (e.g., UTC)
+Get Classes in a Different Timezone 
 bash
 Copy
 Edit
@@ -199,12 +199,12 @@ Copy
 Edit
 curl -X POST http://localhost:5000/book \
 -H "Content-Type: application/json" \
--d '{"class_id":1,"client_name":"John Doe","client_email":"john.doe@example.com"}'
+-d '{"class_id":1,"client_name":"Bhavya","client_email":"bhavya.mettupalli@gmail.com"}'
 Get Bookings by Email
 bash
 Copy
 Edit
-curl "http://localhost:5000/bookings?email=john.doe@example.com"
+curl "http://localhost:5000/bookings?email=bhavya.mettupalli@gmail.com"
 
 **🧪 Running Tests**
 
@@ -232,6 +232,6 @@ Include a link to your Loom video walkthrough explaining the project, API endpoi
 
 **📞 Contact**
 
-If you have any questions, feel free to reach out at [your.email@example.com].
+If you have any questions, feel free to reach out at bhavya.mettupalli@gmail.com.
 
 Happy coding & enjoy your fitness journey! 🧘‍♂️🏋️‍♀️💪
