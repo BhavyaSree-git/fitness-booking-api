@@ -28,20 +28,22 @@ Logging for request and error tracking
 
 ## Project Structure
 
-    fitness_booking_api/
-  ├── pycache/ # Python bytecode cache
-  ├── app.py # Main Flask app entry
-  ├── models.py # Class and Booking logic
-  ├── utils.py # Utility functions (e.g., timezone conversion)
-  ├── requirements.txt # Python dependencies
-  ├── README.md # Project documentation
-  ├── venv/ # Python virtual environment
-  ├── instance/
-  │ └── database.db # SQLite database (optional if seeded at runtime)
-  └── uploads/ # Screenshots for documentation
-  ├── get_classes.png
-  ├── post_book.png
-  └── get_bookings.png
+  fitness_booking_api/
+├── pycache/ # Python bytecode cache
+├── app.py # Main Flask app entry
+├── models.py # Class and Booking logic
+├── utils.py # Utility functions (e.g., timezone conversion)
+├── requirements.txt # Python dependencies
+├── README.md # Project documentation
+├── venv/ # Python virtual environment
+├── instance/
+│ └── database.db # SQLite database (optional if seeded at runtime)
+└── uploads/ # Screenshots for documentation
+├── get_classes.png
+├── post_book.png
+└── get_bookings.png
+
+
     
 
 **🛠️ Features & API Endpoints**
