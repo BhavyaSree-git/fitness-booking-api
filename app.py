@@ -11,7 +11,6 @@ db.init_app(app)
 
 logging.basicConfig(level=logging.INFO)
 
-# New DB creation and seeding using app.app_context
 with app.app_context():
     db.create_all()
     if not FitnessClass.query.first():
