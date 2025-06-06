@@ -53,7 +53,7 @@ Logging for request and error tracking
 Purpose: Get all available fitness classes.
 
 <div style="display:flex;">
-    <img src="https://github.com/BhavyaSree-git/fitness-booking-api/blob/2e9beca64d59330eadb7d7031e2339c8e130accb/uploads/book_post_api.png" alt="Screenshot" width="49%">
+    <img src="https://github.com/BhavyaSree-git/fitness-booking-api/blob/0891f3e949c10652618187ee313916cd1a5d8d4c/uploads/classes_get_api.png" alt="Screenshot" width="49%">
 </div> 
  
 Request:
@@ -94,6 +94,10 @@ json
 **2. POST /book**
 
 Purpose: Book a slot in a class.
+
+<div style="display:flex;">
+    <img src="https://github.com/BhavyaSree-git/fitness-booking-api/blob/2e9beca64d59330eadb7d7031e2339c8e130accb/uploads/book_post_api.png" alt="Screenshot" width="49%">
+</div> 
 
 Request:
 
@@ -136,6 +140,10 @@ Error Response (Class not found):
 **3. GET /bookings?email=<client_email>**
 
 Purpose: Get all bookings for a given email.
+
+<div style="display:flex;">
+    <img src="https://github.com/BhavyaSree-git/fitness-booking-api/blob/0891f3e949c10652618187ee313916cd1a5d8d4c/uploads/bookings_get_api.png" alt="Screenshot" width="49%">
+</div> 
 
 Request:
 
